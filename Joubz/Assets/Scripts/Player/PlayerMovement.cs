@@ -22,16 +22,11 @@ public class PlayerMovement : MonoBehaviour
     }    
 
     void FixedUpdate()
-    {
-        ControlSpeed();
+    {        
         Move();
         Gravity();
     }
-
-    void ControlSpeed()
-    {
-        speed = Mathf.Lerp(speed, speed, acceleration * Time.deltaTime);
-    }
+       
 
     private void Move()
     {
@@ -65,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
             // Align to surface normal
             Quaternion fro = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-            transform.rotation = Quaternion.Slerp(transform.rotation, fro, Time.deltaTime * 2.0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, fro, Time.deltaTime * 4f);
 
         }
         else

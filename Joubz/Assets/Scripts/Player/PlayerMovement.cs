@@ -27,15 +27,13 @@ public class PlayerMovement : MonoBehaviour
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
-        animPerso = transform.GetChild(0).GetComponent<Animator>();
-        
+        animPerso = transform.GetChild(0).GetComponent<Animator>();        
     }    
 
     void FixedUpdate()
     {
         Move();
-        Gravity();
-              
+        Gravity();              
     }
 
 
@@ -55,9 +53,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void SetDir(InputAction.CallbackContext context)
     {        
-        direction = context.ReadValue<Vector2>(); 
-        
-               
+        direction = context.ReadValue<Vector2>();     
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -74,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.Raycast(transform.position, -transform.up, out hit, 0.3f);
         
 
-        if (isGrounded && !hit.transform.gameObject.CompareTag("Escaliers"))
+        if (isGrounded)
         {
             // Stick to surface
             transform.position = hit.point;            

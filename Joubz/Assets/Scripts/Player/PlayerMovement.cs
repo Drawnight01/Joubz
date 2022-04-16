@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 10f;
+    public float maxSpeed = 30f;
     
     public float jumpForce = 10f;
     public float valGravity = 9.5f;
@@ -27,34 +28,36 @@ public class PlayerMovement : MonoBehaviour
     }    
 
     void FixedUpdate()
-    {        
-        Move();
+    {
         Gravity();
+        Move();
+        
     }
-       
+
+    private void Update()
+    {
+        
+    }
+
 
     private void Move()
     {
         Vector3 vectMove = (transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x);
         vectMove = speed * vectMove;
-        rbPlayer.velocity += vectMove;
+        rbPlayer.velocity  +=  vectMove * Time.deltaTime;
+        rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
         
-
-        if (direction != Vector2.zero )
-        {
+        if (direction != Vector2.zero)
             transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
-        }
+        
     }
     
     public void SetDir(InputAction.CallbackContext context)
-    {
+    {        
+        direction = context.ReadValue<Vector2>(); 
         
-        direction = context.ReadValue<Vector2>();
-
-        if (direction != Vector2.zero)
-        {
-            target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), transform.GetChild(0).up);
-        }
+        if(direction != Vector2.zero)
+            target = Quaternion.LookRotation((transform.GetChild(3).transform.forward * direction.y) + (transform.GetChild(3).transform.right * direction.x), (transform.GetChild(3).transform.up));       
     }
 
     public void Jump(InputAction.CallbackContext context)

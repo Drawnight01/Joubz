@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
 
     private Quaternion target;
+    private Animator animPerso;
 
     public Vector2 direction = new Vector2(0,0);
     private Rigidbody rbPlayer;
@@ -24,21 +26,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
-        
+        animPerso = transform.GetChild(0).GetComponent<Animator>();
     }    
 
     void FixedUpdate()
     {
         Gravity();
-        Move();
-        
+        Move();        
     }
-
-    private void Update()
-    {
-        
-    }
-
 
     private void Move()
     {
@@ -46,7 +41,8 @@ public class PlayerMovement : MonoBehaviour
         vectMove = speed * vectMove;
         rbPlayer.velocity  +=  vectMove * Time.deltaTime;
         rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
-        
+        animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
+
         if (direction != Vector2.zero)
             transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
         

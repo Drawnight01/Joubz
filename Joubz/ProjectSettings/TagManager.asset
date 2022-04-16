@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Escaliers
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Murs
   - Water
   - UI
   - 

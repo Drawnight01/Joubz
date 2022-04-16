@@ -6,9 +6,7 @@ using UnityEngine.InputSystem;
 public class JoystickCamera : MonoBehaviour
 {
     [SerializeField]
-    float sensitivityX = 8f;
-
-    [SerializeField]
+    float sensitivityX = 8f;    
     float xRotation = 0f;
 
 
@@ -36,11 +34,12 @@ public class JoystickCamera : MonoBehaviour
     
     private void RotateCam()
     {
-        transform.Rotate(transform.up, camDir.x * sensitivityX * Time.deltaTime);
+        //transform.Rotate(transform.up, camDir.x * sensitivityX * Time.deltaTime, Space.Self);
         xRotation += camDir.y;
         xRotation = Mathf.Clamp(xRotation, minXClamp, xClamp);
         Vector3 targetRotation = transform.localEulerAngles;
         targetRotation.x = xRotation;
+        targetRotation.y += camDir.x * sensitivityX;
         targetRotation.z = 0;
         transform.localEulerAngles = targetRotation;
     }

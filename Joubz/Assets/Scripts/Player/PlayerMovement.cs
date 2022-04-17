@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
 
     private Quaternion target;
-    private Animator animPerso;
+    public Animator animPerso;
 
     public Vector2 direction = new Vector2(0,0);
     private Rigidbody rbPlayer;
@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
         Gravity();              
+    }
+    private void Update()
+    {
+        animPerso.SetBool("isGrounded", isGrounded);
     }
 
 
@@ -58,8 +62,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(isGrounded)
+        if (isGrounded)
+        {
+            animPerso.SetTrigger("Jump");
             rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        }
+            
     }
     
     private void Gravity()

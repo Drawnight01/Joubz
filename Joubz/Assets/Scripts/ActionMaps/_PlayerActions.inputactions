@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Echap",
+                    "type": "Button",
+                    "id": "de72b0e2-814b-4f99-98c6-3836b344dfd1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -260,6 +268,28 @@
                     "action": "Flair",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb291108-3e6d-4324-9665-cd0f0e7b5dcf",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Echap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e1fa8f6-fddd-4974-a452-b1840aa78808",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Echap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -417,8 +447,30 @@
                 },
                 {
                     "name": "",
+                    "id": "6932b4a6-ba98-4e14-9eb1-1b6d2cbee528",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e1b887b9-2f63-4dd7-a159-18d9f2dadbbb",
                     "path": "*/{Cancel}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e08bd021-57a1-469f-a2b3-fd1ae25cfe1a",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

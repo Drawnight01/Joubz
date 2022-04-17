@@ -2878,6 +2878,62 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d57a28ea-f197-4507-a287-2e185809bf4f
     m_ActionName: Player/Flair
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8787977194696993354}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Echap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: de72b0e2-814b-4f99-98c6-3836b344dfd1
+    m_ActionName: Player/Echap[/XInputControllerWindows/start,/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65679be7-31ef-49ba-8ea4-f1f82e8bc3fd
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f330fb85-d901-4dbf-951b-8bf3a61efe4c
+    m_ActionName: UI/LeftClick[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 78dceb68-56a1-417e-a155-7b4018d45804
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 665c8069-4c30-47f5-962c-8abb80f55d20
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf642994-7ecc-45b6-9360-30feaa164782
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a583849e-85bf-42d6-8d89-462436138b4e
+    m_ActionName: UI/Move[/XInputControllerWindows/dpad,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 82db8637-a71e-41b8-bbed-c3be1dbe7ae0
+    m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 204f4cf3-2f0a-4014-8904-8a4b2fb94edc
+    m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f6259781-c39e-4195-ba6b-4bc7750ceb2a
+    m_ActionName: UI/TrackedPosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33381eec-7db5-44ef-ad92-315017177c10
+    m_ActionName: UI/TrackedOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2932,7 +2988,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

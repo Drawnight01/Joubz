@@ -2468,7 +2468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   maxSpeed: 13
-  jumpForce: 200
+  jumpForce: 150
   valGravity: 9.8
   rotationSpeed: 10
   animPerso: {fileID: 0}

@@ -82,10 +82,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6729419860414842100, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
     - target: {fileID: 919132149155446097, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
       propertyPath: m_Name
       value: Marche
       objectReference: {fileID: 0}
+    - target: {fileID: 5781913828132109854, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
+    - target: {fileID: 6039574171232974368, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
 --- !u!4 &6237746936681893898 stripped

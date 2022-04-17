@@ -38,7 +38,6 @@ public class PortailTeleporter : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("nique");
             playerIsOverlapping = true;
         }
     }

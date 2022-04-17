@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -69,6 +70,13 @@ public class PlayerMovement : MonoBehaviour
         }
             
     }
+
+    public void Echap(InputAction.CallbackContext context)
+    {
+        Debug.Log("Echap");
+        SceneManager.LoadScene("In_Game", LoadSceneMode.Additive);
+    }
+
     public float SmoothGravRota;
     private void Gravity()
     {

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PortailManager : MonoBehaviour
 {
-    public Camera cameraD, cameraC, cameraB, cameraA;
+    public Camera cameraH, cameraG, cameraF, cameraE, cameraD, cameraC, cameraB, cameraA;
 
-    public Material cameraMatD, cameraMatC, cameraMatB, cameraMatA;
+    public Material cameraMatH, cameraMatG, cameraMatF, cameraMatE, cameraMatD, cameraMatC, cameraMatB, cameraMatA;
 
     void Start()
     {
@@ -37,5 +37,33 @@ public class PortailManager : MonoBehaviour
         }   
         cameraD.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
         cameraMatD.mainTexture = cameraD.targetTexture;
+
+        if (cameraE.targetTexture != null)
+        {
+            cameraE.targetTexture.Release();
+        }   
+        cameraE.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        cameraMatE.mainTexture = cameraE.targetTexture;
+
+        if (cameraF.targetTexture != null)
+        {
+            cameraF.targetTexture.Release();
+        }   
+        cameraF.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        cameraMatF.mainTexture = cameraF.targetTexture;
+
+        if (cameraG.targetTexture != null)
+        {
+            cameraG.targetTexture.Release();
+        }   
+        cameraG.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        cameraMatG.mainTexture = cameraG.targetTexture;
+
+        if (cameraH.targetTexture != null)
+        {
+            cameraH.targetTexture.Release();
+        }   
+        cameraH.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        cameraMatH.mainTexture = cameraH.targetTexture;
     }
 }

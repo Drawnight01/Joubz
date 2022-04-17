@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.Raycast(transform.position, -transform.up, out hit, 0.3f);
         
 
-        if (isGrounded)
+        if (isGrounded && hit.transform.CompareTag("Escaliers"))
         {
             // Stick to surface
             transform.position = hit.point;            
@@ -99,8 +99,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            
-            
+            transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
+
         }
     }
 

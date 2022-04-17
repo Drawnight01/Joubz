@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3699061451470769438}
   - component: {fileID: 3552511684458315064}
   - component: {fileID: 3054968367788658109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3699061451470769438
 Transform:
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,12 +93,12 @@ GameObject:
   - component: {fileID: 4978357138323888009}
   - component: {fileID: 4462685181988886600}
   - component: {fileID: 2906373234590672530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poteau1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4978357138323888009
 Transform:
@@ -142,7 +142,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -175,12 +175,12 @@ GameObject:
   - component: {fileID: 7076407552043302350}
   - component: {fileID: 2194747636743909653}
   - component: {fileID: 3085839118937051661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7076407552043302350
 Transform:
@@ -224,7 +224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,12 +257,12 @@ GameObject:
   - component: {fileID: 697691469671473661}
   - component: {fileID: 8740325478913119537}
   - component: {fileID: 229273769224854422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poteau1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &697691469671473661
 Transform:
@@ -306,7 +306,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -339,12 +339,12 @@ GameObject:
   - component: {fileID: 8123360020797827515}
   - component: {fileID: 4021117100743178373}
   - component: {fileID: 7590839620419286667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8123360020797827515
 Transform:
@@ -388,7 +388,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -419,12 +419,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3820543692002559456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrandeRambarde (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3820543692002559456
 Transform:
@@ -457,12 +457,12 @@ GameObject:
   - component: {fileID: 5867305210086120852}
   - component: {fileID: 3607258045007515178}
   - component: {fileID: 5103897566539046264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5867305210086120852
 Transform:
@@ -506,7 +506,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -539,12 +539,12 @@ GameObject:
   - component: {fileID: 728519434465254924}
   - component: {fileID: 1280110373652916700}
   - component: {fileID: 6191479920957743072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poteau1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &728519434465254924
 Transform:
@@ -588,7 +588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -621,12 +621,12 @@ GameObject:
   - component: {fileID: 6803986504537709133}
   - component: {fileID: 8387445697743268832}
   - component: {fileID: 7199362607157654959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poteau1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6803986504537709133
 Transform:
@@ -670,7 +670,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -703,12 +703,12 @@ GameObject:
   - component: {fileID: 2134889698216363286}
   - component: {fileID: 7144338468397891792}
   - component: {fileID: 904382226948984106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2134889698216363286
 Transform:
@@ -752,7 +752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -785,12 +785,12 @@ GameObject:
   - component: {fileID: 2611995107717327236}
   - component: {fileID: 8600779669744915903}
   - component: {fileID: 4014785084920180280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2611995107717327236
 Transform:
@@ -834,7 +834,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -867,12 +867,12 @@ GameObject:
   - component: {fileID: 7437021860472649461}
   - component: {fileID: 8569989660194525454}
   - component: {fileID: 8902462708739918320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7437021860472649461
 Transform:
@@ -916,7 +916,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -949,12 +949,12 @@ GameObject:
   - component: {fileID: 6159397093509926677}
   - component: {fileID: 6587132318426434190}
   - component: {fileID: 697708544924628798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poteau1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6159397093509926677
 Transform:
@@ -998,7 +998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1031,12 +1031,12 @@ GameObject:
   - component: {fileID: 4695133721727879699}
   - component: {fileID: 1614035199631882086}
   - component: {fileID: 7754051761016270668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4695133721727879699
 Transform:
@@ -1080,7 +1080,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1113,12 +1113,12 @@ GameObject:
   - component: {fileID: 3399423594867240639}
   - component: {fileID: 2962994773173353811}
   - component: {fileID: 7516699041170827024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3399423594867240639
 Transform:
@@ -1162,7 +1162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1195,12 +1195,12 @@ GameObject:
   - component: {fileID: 5067121413325754089}
   - component: {fileID: 1100962161256160285}
   - component: {fileID: 8256631092362859334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5067121413325754089
 Transform:
@@ -1244,7 +1244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1277,12 +1277,12 @@ GameObject:
   - component: {fileID: 3489030525117292249}
   - component: {fileID: 6943691249666343922}
   - component: {fileID: 1326370879424452939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3489030525117292249
 Transform:
@@ -1326,7 +1326,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1359,12 +1359,12 @@ GameObject:
   - component: {fileID: 610423361482010654}
   - component: {fileID: 747617967599140920}
   - component: {fileID: 1245370168392331453}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &610423361482010654
 Transform:
@@ -1408,7 +1408,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1439,12 +1439,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4716687660347316355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateformeEscalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4716687660347316355
 Transform:
@@ -1472,12 +1472,12 @@ GameObject:
   - component: {fileID: 4716687660690158383}
   - component: {fileID: 4716687660690158380}
   - component: {fileID: 4716687660690158381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4716687660690158383
 Transform:
@@ -1521,7 +1521,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1554,12 +1554,12 @@ GameObject:
   - component: {fileID: 4716687660711323192}
   - component: {fileID: 4716687660711323194}
   - component: {fileID: 4716687660711323195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4716687660711323192
 Transform:
@@ -1603,7 +1603,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1636,12 +1636,12 @@ GameObject:
   - component: {fileID: 7861985149219999888}
   - component: {fileID: 3019757774055458306}
   - component: {fileID: 67277793859217233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7861985149219999888
 Transform:
@@ -1685,7 +1685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1718,12 +1718,12 @@ GameObject:
   - component: {fileID: 9056192475030451649}
   - component: {fileID: 1226322097899149573}
   - component: {fileID: 7793150052830141334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &9056192475030451649
 Transform:
@@ -1767,7 +1767,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1800,12 +1800,12 @@ GameObject:
   - component: {fileID: 2473674465693871255}
   - component: {fileID: 7426456806465865131}
   - component: {fileID: 5662205382552719432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plateforme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2473674465693871255
 Transform:
@@ -1849,7 +1849,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1882,12 +1882,12 @@ GameObject:
   - component: {fileID: 213398063702567244}
   - component: {fileID: 3281919277993680046}
   - component: {fileID: 6464759934603990939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &213398063702567244
 Transform:
@@ -1931,7 +1931,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1964,12 +1964,12 @@ GameObject:
   - component: {fileID: 2642438161267620855}
   - component: {fileID: 6970194410243323611}
   - component: {fileID: 1709827713857962876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2642438161267620855
 Transform:
@@ -2013,7 +2013,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2044,12 +2044,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5116004594283140496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plateforme_Escalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5116004594283140496
 Transform:
@@ -2078,12 +2078,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5116004594792687944}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5116004594792687944
 Transform:
@@ -2110,12 +2110,12 @@ GameObject:
   - component: {fileID: 2427391253293833145}
   - component: {fileID: 6260957482720752997}
   - component: {fileID: 5192607463358969746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2427391253293833145
 Transform:
@@ -2159,7 +2159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2192,12 +2192,12 @@ GameObject:
   - component: {fileID: 655600569333294709}
   - component: {fileID: 1708017602988272953}
   - component: {fileID: 2353826631149872823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &655600569333294709
 Transform:
@@ -2241,7 +2241,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2274,12 +2274,12 @@ GameObject:
   - component: {fileID: 1050770750280308116}
   - component: {fileID: 1079475784612990430}
   - component: {fileID: 1981049993715827767}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1050770750280308116
 Transform:
@@ -2323,7 +2323,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2356,12 +2356,12 @@ GameObject:
   - component: {fileID: 5910954019817008073}
   - component: {fileID: 8208503695814222527}
   - component: {fileID: 251241879026624237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5910954019817008073
 Transform:
@@ -2405,7 +2405,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2438,12 +2438,12 @@ GameObject:
   - component: {fileID: 7839514383040913723}
   - component: {fileID: 838586950979507974}
   - component: {fileID: 4500292108551745752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7839514383040913723
 Transform:
@@ -2487,7 +2487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2518,12 +2518,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5506267393348042827}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrandeRambarde (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5506267393348042827
 Transform:
@@ -2556,12 +2556,12 @@ GameObject:
   - component: {fileID: 8061667225798340868}
   - component: {fileID: 4989834987938575463}
   - component: {fileID: 2175402419172556906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8061667225798340868
 Transform:
@@ -2605,7 +2605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2638,12 +2638,12 @@ GameObject:
   - component: {fileID: 7633715919410947012}
   - component: {fileID: 3837681491093802782}
   - component: {fileID: 6910615983512165732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7633715919410947012
 Transform:
@@ -2687,7 +2687,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2720,12 +2720,12 @@ GameObject:
   - component: {fileID: 7005883938244215203}
   - component: {fileID: 5200879505223684197}
   - component: {fileID: 7697484985028576623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7005883938244215203
 Transform:
@@ -2769,7 +2769,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2800,12 +2800,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5761137289359292375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrandeRambarde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5761137289359292375
 Transform:
@@ -2843,12 +2843,12 @@ GameObject:
   - component: {fileID: 7675997301249616671}
   - component: {fileID: 4716687660382630931}
   - component: {fileID: 1461931585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StairOneWayUp
-  m_TagString: Escaliers
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4343185717400933451
 Transform:
@@ -2980,12 +2980,12 @@ GameObject:
   - component: {fileID: 6348715763133298687}
   - component: {fileID: 369966149502534464}
   - component: {fileID: 4162512404667480690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6348715763133298687
 Transform:
@@ -3029,7 +3029,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3062,12 +3062,12 @@ GameObject:
   - component: {fileID: 5096033543669871314}
   - component: {fileID: 6541292222949128983}
   - component: {fileID: 1994957366722399970}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5096033543669871314
 Transform:
@@ -3111,7 +3111,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3145,12 +3145,12 @@ GameObject:
   - component: {fileID: 4715230954736524852}
   - component: {fileID: 7555825733341155602}
   - component: {fileID: 7724453310793410736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
-  m_TagString: Escaliers
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6932264965356917435
 Transform:
@@ -3216,12 +3216,12 @@ GameObject:
   - component: {fileID: 8483091875384144091}
   - component: {fileID: 478251140207522152}
   - component: {fileID: 1343738287703472259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poteau2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8483091875384144091
 Transform:
@@ -3265,7 +3265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3298,12 +3298,12 @@ GameObject:
   - component: {fileID: 6239259251353961182}
   - component: {fileID: 4469023978676661058}
   - component: {fileID: 1234777239044058259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6239259251353961182
 Transform:
@@ -3347,7 +3347,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3380,12 +3380,12 @@ GameObject:
   - component: {fileID: 6305168375471049344}
   - component: {fileID: 769424396695632377}
   - component: {fileID: 5940931524256613370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6305168375471049344
 Transform:
@@ -3429,7 +3429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3462,12 +3462,12 @@ GameObject:
   - component: {fileID: 8580482867775951886}
   - component: {fileID: 6045426273823206478}
   - component: {fileID: 1661003923028482191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Escalier (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8580482867775951886
 Transform:
@@ -3511,7 +3511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 81c91bb56841bd04490e4ede1d11ea96, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3544,12 +3544,12 @@ GameObject:
   - component: {fileID: 722788581971121329}
   - component: {fileID: 2663768023461394261}
   - component: {fileID: 5090705530274068620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rambarde (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &722788581971121329
 Transform:
@@ -3593,7 +3593,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 32bba5c59b1db684489e530037617d90, type: 3}
+  - {fileID: 2100000, guid: be396fc3fdc4f3542bc3f6655af94f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -12,7 +12,7 @@ public class LoadSceneAsync : MonoBehaviour
 
     void Start()
     {        
-        StartCoroutine(LoadScene_Coroutine("Stairs"));  
+        StartCoroutine(LoadScene_Coroutine("Main_Seb"));  
     }
 
     IEnumerator LoadScene_Coroutine(string sceneName)

@@ -16,6 +16,7 @@ public class Destroyer : MonoBehaviour
         if(collider.tag == "Player")
         {
             player.position = respawnPoint.position;
+            player.rotation = Quaternion.identity;
         }
     }
 }

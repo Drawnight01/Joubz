@@ -18,7 +18,7 @@ public class TornadoMove : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            rbPlayer.AddForce(transform.up * force, ForceMode.Force);
+            rbPlayer.AddForce(rbPlayer.transform.up * force, ForceMode.Impulse);
         }
     }
 }

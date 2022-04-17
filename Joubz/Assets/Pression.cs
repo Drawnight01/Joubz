@@ -5,10 +5,12 @@ using UnityEngine;
 public class Pression : MonoBehaviour
 {
     private Animator anim;
+    private Animator platAnim;
 
     void Start()
     {
         anim = transform.parent.GetComponent<Animator>();
+        platAnim = GameObject.Find("Plat1").GetComponent<Animator>();
     }
 
     void OnTriggerEnter(Collider col)
@@ -16,6 +18,7 @@ public class Pression : MonoBehaviour
         if (col.tag == "Player")
         {
             anim.Play("Pression");
+            platAnim.Play("Plat");
         }
     }
 }

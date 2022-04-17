@@ -1638,13 +1638,33 @@ GameObject:
   - component: {fileID: 1090520256535783813}
   - component: {fileID: 4075078097897121312}
   - component: {fileID: 2263448836908323562}
+  - component: {fileID: 317959837610586944}
   m_Layer: 0
-  m_Name: Plateforme_Desert1
+  m_Name: Plat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &317959837610586944
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317959837610586943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0cd8bde44d1c0de4db15ccad8a9cd2af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &338829666894286666
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1702,13 +1722,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317959837610586943}
-  m_LocalRotation: {x: -0.00037768338, y: 0.00000044224188, z: 0.0011709322, w: 0.9999993}
-  m_LocalPosition: {x: -1100.641, y: 699.4343, z: 12.971674}
+  m_LocalRotation: {x: -0.110168226, y: -0.007223463, z: -0.06271221, w: 0.9919062}
+  m_LocalPosition: {x: -1097, y: -1268, z: 14}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1463236267}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -12.677, y: -0.03, z: -7.232}
 --- !u!1 &1134230683159993790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,13 +2425,33 @@ GameObject:
   - component: {fileID: 5682708107695062781}
   - component: {fileID: 8751289569144107352}
   - component: {fileID: 6815674903731799442}
+  - component: {fileID: 5014433034373768264}
   m_Layer: 0
-  m_Name: Plateforme_Desert2 (1)
+  m_Name: Plat0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &5014433034373768264
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5014433034373768263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c0a6b896c3428049b1d397cd32d7eb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5113759107199970226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2526,13 +2566,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5014433034373768263}
-  m_LocalRotation: {x: -0.00028812178, y: -0.07556472, z: 0.001196124, w: 0.99714017}
-  m_LocalPosition: {x: -1490.8986, y: 808.9901, z: -27.611094}
+  m_LocalRotation: {x: -0.013279614, y: -0.074519046, z: -0.17030989, w: 0.98247904}
+  m_LocalPosition: {x: -1487, y: -972, z: -27}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1463236267}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: -8.667, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.951, y: -8.169, z: -19.458}
 --- !u!4 &5688079373945340677
 Transform:
   m_ObjectHideFlags: 0
@@ -2615,7 +2655,7 @@ GameObject:
   - component: {fileID: 7503469753512006317}
   - component: {fileID: 5748100235845461607}
   m_Layer: 0
-  m_Name: Plateforme_Desert1 (1)
+  m_Name: Plat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2711,7 +2751,7 @@ GameObject:
   - component: {fileID: 7467629009793947269}
   - component: {fileID: 4631580912553517647}
   m_Layer: 0
-  m_Name: Plateforme_Desert2
+  m_Name: Plat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,11 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
-<<<<<<< HEAD
-        //animPerso = transform.GetChild(0).GetComponent<Animator>();
-=======
         animPerso = transform.GetChild(0).GetComponent<Animator>();        
->>>>>>> b15b0c30e538542ea2aecd1aa5f632cb2f640d00
     }    
 
     void FixedUpdate()
@@ -51,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         vectMove = speed * vectMove;
         rbPlayer.velocity  +=  vectMove * Time.deltaTime;
         rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
-        //animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
+        animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
 
         if (direction != Vector2.zero)
             target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));

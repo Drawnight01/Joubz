@@ -4,39 +4,21 @@ using UnityEngine;
 
 public class TornadoMove : MonoBehaviour
 {
-    public float speed;
+    public float force;
 
-    private bool inTornado = false;
-
-    private Transform player;
+    private Rigidbody rbPlayer;
 
     
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
-    }
-
-    void Move()
-    {
-        if (inTornado)
-        {
-            player.Translate(transform.up * speed * Time.deltaTime);
-        }
+        rbPlayer = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
     }
 
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
         {
-            inTornado = true;
-        }
-    }
-
-    void OnTriggerExit(Collider col)
-    {
-        if (col.tag == "Player")
-        {
-            inTornado = false;
+            rbPlayer.AddForce(transform.up * force, ForceMode.Force);
         }
     }
 }

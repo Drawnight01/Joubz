@@ -27,10 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
-
-
-        animPerso = transform.GetChild(0).GetComponent<Animator>();        
-
+        animPerso = transform.GetChild(0).GetComponent<Animator>();
     }    
 
     void FixedUpdate()

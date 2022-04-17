@@ -38,7 +38,7 @@ public class JoystickCamera : MonoBehaviour
         xRotation += camDir.y;
         xRotation = Mathf.Clamp(xRotation, minXClamp, xClamp);
         Vector3 targetRotation = transform.localEulerAngles;
-        targetRotation.x = xRotation;
+        targetRotation.x = -xRotation;
         targetRotation.y += camDir.x * sensitivityX;
         targetRotation.z = 0;
         transform.localEulerAngles = targetRotation;
@@ -55,7 +55,7 @@ public class JoystickCamera : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(transform.position, -transform.forward, out hit, camDistance, maskCam))
         {            
-            playerCamera.position = Vector3.Lerp(playerCamera.position, hit.point + playerCamera.forward * 0.1f, curve.Evaluate( Time.deltaTime * lerpTime));
+            playerCamera.position = Vector3.Lerp(playerCamera.position, hit.point + playerCamera.forward * 0.2f, curve.Evaluate( Time.deltaTime * lerpTime));
         }
         else
         {

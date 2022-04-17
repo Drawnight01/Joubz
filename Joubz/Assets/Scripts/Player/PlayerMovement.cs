@@ -15,25 +15,31 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
 
     private Quaternion target;
-    private Animator animPerso;
+    public Animator animPerso;
 
     public Vector2 direction = new Vector2(0,0);
     private Rigidbody rbPlayer;
     private GameObject camAchor;
-    private bool isGrounded;
+    public bool isGrounded;
 
+   
     void Awake()
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
-        animPerso = transform.GetChild(0).GetComponent<Animator>();
+        animPerso = transform.GetChild(0).GetComponent<Animator>();        
     }    
 
     void FixedUpdate()
     {
-        Gravity();
-        Move();        
+        Move();
+        Gravity();              
     }
+    private void Update()
+    {
+        animPerso.SetBool("isGrounded", isGrounded);
+    }
+
 
     private void Move()
     {
@@ -44,43 +50,48 @@ public class PlayerMovement : MonoBehaviour
         animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
 
         if (direction != Vector2.zero)
-            transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
-        
+            target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));
+
+
     }
     
     public void SetDir(InputAction.CallbackContext context)
     {        
-        direction = context.ReadValue<Vector2>(); 
-        
-        if(direction != Vector2.zero)
-            target = Quaternion.LookRotation((transform.GetChild(3).transform.forward * direction.y) + (transform.GetChild(3).transform.right * direction.x), (transform.GetChild(3).transform.up));       
+        direction = context.ReadValue<Vector2>();     
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(isGrounded)
+        if (isGrounded)
+        {
+            animPerso.SetTrigger("Jump");
             rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        }
+            
     }
-
+    
     private void Gravity()
     {
         rbPlayer.velocity -= transform.up * valGravity * rbPlayer.mass * Time.deltaTime;
-        
+
         RaycastHit hit;
         isGrounded = Physics.Raycast(transform.position, -transform.up, out hit, 0.3f);
+        
 
-        if (isGrounded && !hit.transform.gameObject.CompareTag("Escaliers"))
+        if (isGrounded)
         {
             // Stick to surface
-            transform.position = hit.point;
-
+            transform.position = hit.point;            
+            
             // Align to surface normal
             Quaternion fro = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-            transform.rotation = Quaternion.Slerp(transform.rotation, fro, Time.deltaTime * 6f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, fro, Time.deltaTime * 10f);
+            transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
 
         }
         else
         {
+            
             Debug.Log("Lost contact...");
         }
     }

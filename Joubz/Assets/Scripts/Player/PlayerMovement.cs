@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
-        animPerso = transform.GetChild(0).GetComponent<Animator>();
+        //animPerso = transform.GetChild(0).GetComponent<Animator>();
     }    
 
     void FixedUpdate()
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         vectMove = speed * vectMove;
         rbPlayer.velocity  +=  vectMove * Time.deltaTime;
         rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
-        animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
+        //animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
 
         if (direction != Vector2.zero)
             transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);

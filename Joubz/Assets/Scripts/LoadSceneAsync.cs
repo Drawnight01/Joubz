@@ -30,7 +30,8 @@ public class LoadSceneAsync : MonoBehaviour
 
             yield return null;
         }
+        SceneManager.UnloadSceneAsync("LoadSceneAsync");
         loadingScreen.SetActive(false);
-        SceneManager.UnloadSceneAsync("SceneLoadAsync");
+        
     }
 }

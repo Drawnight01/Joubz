@@ -44,6 +44,17 @@
                 },
                 {
                     "name": "",
+                    "id": "34cd9695-f18d-4b4d-83be-0ded6eb738eb",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5d443e3d-a6e7-4765-b1df-3d5798e57a61",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",

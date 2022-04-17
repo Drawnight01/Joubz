@@ -7,6 +7,12 @@ public class PortailTeleporter : MonoBehaviour
     public Transform player, reciever;
 
     private bool playerIsOverlapping;
+
+    void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
+
     void Update()
     {
         if (playerIsOverlapping)

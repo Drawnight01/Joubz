@@ -52,6 +52,7 @@
                 },
                 {
                     "name": "",
+
                     "id": "fd2e9b07-755d-419c-9390-9ec1a6c1da5f",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -139,7 +140,7 @@
                     "isPartOfComposite": false
                 },
                 {
-<<<<<<< HEAD
+
                     "name": "2D Vector",
                     "id": "5a6666fd-471a-4ce9-802c-ba589f47dad4",
                     "path": "2DVector",
@@ -193,7 +194,7 @@
                     "action": "Camera",
                     "isComposite": false,
                     "isPartOfComposite": true
-=======
+                    
                     "name": "",
                     "id": "cbc814df-7683-4729-9803-03f8edfd5e37",
                     "path": "<Gamepad>/dpad/up",
@@ -203,7 +204,7 @@
                     "action": "Taunt",
                     "isComposite": false,
                     "isPartOfComposite": false
->>>>>>> b15b0c30e538542ea2aecd1aa5f632cb2f640d00
+
                 }
             ]
         }

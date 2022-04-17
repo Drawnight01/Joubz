@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
             
     }
-    
+    public float SmoothGravRota;
     private void Gravity()
     {
         rbPlayer.velocity -= transform.up * valGravity * rbPlayer.mass * Time.deltaTime;
@@ -85,14 +85,16 @@ public class PlayerMovement : MonoBehaviour
             
             // Align to surface normal
             Quaternion fro = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-            transform.rotation = Quaternion.Slerp(transform.rotation, fro, Time.deltaTime * 10f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, fro, Time.deltaTime * SmoothGravRota);
             transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
 
         }
         else
         {
             
-            Debug.Log("Lost contact...");
+            
         }
     }
+
+    
 }

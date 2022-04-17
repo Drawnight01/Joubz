@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
 
     private Quaternion target;
-    private Animator animPerso;
+    public Animator animPerso;
 
     public Vector2 direction = new Vector2(0,0);
     private Rigidbody rbPlayer;
@@ -27,13 +27,21 @@ public class PlayerMovement : MonoBehaviour
     {
         rbPlayer = GetComponent<Rigidbody>();
         camAchor = transform.GetChild(2).gameObject;
+<<<<<<< HEAD
+        //animPerso = transform.GetChild(0).GetComponent<Animator>();
+=======
         animPerso = transform.GetChild(0).GetComponent<Animator>();        
+>>>>>>> b15b0c30e538542ea2aecd1aa5f632cb2f640d00
     }    
 
     void FixedUpdate()
     {
         Move();
         Gravity();              
+    }
+    private void Update()
+    {
+        animPerso.SetBool("isGrounded", isGrounded);
     }
 
 
@@ -43,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         vectMove = speed * vectMove;
         rbPlayer.velocity  +=  vectMove * Time.deltaTime;
         rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
-        animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
+        //animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
 
         if (direction != Vector2.zero)
             target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));
@@ -58,8 +66,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(isGrounded)
+        if (isGrounded)
+        {
+            animPerso.SetTrigger("Jump");
             rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        }
+            
     }
     
     private void Gravity()

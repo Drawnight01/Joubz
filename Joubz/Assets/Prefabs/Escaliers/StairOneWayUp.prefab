@@ -2842,6 +2842,7 @@ GameObject:
   - component: {fileID: 5636232205533907087}
   - component: {fileID: 7675997301249616671}
   - component: {fileID: 4716687660382630931}
+  - component: {fileID: 1461931585}
   m_Layer: 0
   m_Name: StairOneWayUp
   m_TagString: Escaliers
@@ -2892,7 +2893,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7575631809963643743}
-  m_Material: {fileID: 13400000, guid: ea1d08b6aff14824dbea2c73e2b5bdc3, type: 2}
+  m_Material: {fileID: 13400000, guid: a398f00396db30847841f5c96d73346b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2905,7 +2906,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7575631809963643743}
-  m_Material: {fileID: 13400000, guid: ea1d08b6aff14824dbea2c73e2b5bdc3, type: 2}
+  m_Material: {fileID: 13400000, guid: a398f00396db30847841f5c96d73346b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2918,7 +2919,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7575631809963643743}
-  m_Material: {fileID: 13400000, guid: ea1d08b6aff14824dbea2c73e2b5bdc3, type: 2}
+  m_Material: {fileID: 13400000, guid: a398f00396db30847841f5c96d73346b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2931,7 +2932,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7575631809963643743}
-  m_Material: {fileID: 13400000, guid: ea1d08b6aff14824dbea2c73e2b5bdc3, type: 2}
+  m_Material: {fileID: 13400000, guid: a398f00396db30847841f5c96d73346b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2956,6 +2957,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1461931585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575631809963643743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb79202ae8303a43a0a216da3291321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7682534070144309838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,7 +3160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8132861477749975227}
   m_LocalRotation: {x: 0, y: 0, z: 0.21234825, w: 0.97719413}
-  m_LocalPosition: {x: 5.6, y: 0.76, z: -0}
+  m_LocalPosition: {x: 5.6, y: 0.53, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4343185717400933451}

@@ -52,6 +52,17 @@
                 },
                 {
                     "name": "",
+                    "id": "fd2e9b07-755d-419c-9390-9ec1a6c1da5f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5d443e3d-a6e7-4765-b1df-3d5798e57a61",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
@@ -75,7 +86,7 @@
                 {
                     "name": "up",
                     "id": "4cde40c6-4573-434e-b2b5-41a9b942a194",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -97,7 +108,7 @@
                 {
                     "name": "left",
                     "id": "d1249f9d-2b9e-4f5b-9e32-a84d94d0c128",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -128,6 +139,61 @@
                     "isPartOfComposite": false
                 },
                 {
+<<<<<<< HEAD
+                    "name": "2D Vector",
+                    "id": "5a6666fd-471a-4ce9-802c-ba589f47dad4",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "1695bb1b-c9ea-418c-9772-0249a4e936eb",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "2824ea3e-4117-4dd5-a191-78001f409827",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "c825e3f8-de96-4d3a-a1a5-cfa1eb445125",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "9bf4a863-d0c9-4cbe-bb37-c443837d1d86",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+=======
                     "name": "",
                     "id": "cbc814df-7683-4729-9803-03f8edfd5e37",
                     "path": "<Gamepad>/dpad/up",
@@ -137,6 +203,7 @@
                     "action": "Taunt",
                     "isComposite": false,
                     "isPartOfComposite": false
+>>>>>>> b15b0c30e538542ea2aecd1aa5f632cb2f640d00
                 }
             ]
         }

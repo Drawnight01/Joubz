@@ -11,6 +11,7 @@ public class JoystickCamera : MonoBehaviour
 
 
     [SerializeField] Transform playerCamera;
+    [SerializeField] Transform player;
     [SerializeField] float xClamp = 85f;
     [SerializeField] float minXClamp = 0f;
 
@@ -21,6 +22,12 @@ public class JoystickCamera : MonoBehaviour
     public AnimationCurve curve;
     public Vector2 camDir;
 
+    private void Start()
+    {
+        playerCamera = transform.GetChild(0);
+        player = GameObject.Find("Player").transform;
+    }
+
     private void Update()
     {
         
@@ -30,8 +37,15 @@ public class JoystickCamera : MonoBehaviour
     {        
         CameraColision();
         RotateCam();
+        //CamFollow();
     }
-    
+
+    private void CamFollow()
+    {
+        transform.position = Vector3.Lerp(transform.position, player.position, curve.Evaluate(Time.deltaTime * lerpTime));
+        transform.rotation = Quaternion.Lerp(transform.rotation, player.rotation, curve.Evaluate(Time.deltaTime * lerpTime));
+    }
+
     private void RotateCam()
     {
         //transform.Rotate(transform.up, camDir.x * sensitivityX * Time.deltaTime, Space.Self);

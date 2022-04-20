@@ -7,27 +7,39 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement Parameters")]
     public float speed = 10f;
-    public float maxSpeed = 30f;
-    
-    public float jumpForce = 10f;
-    public float valGravity = 9.5f;
-
-    public float rotationSpeed;
-
-    private Quaternion target;
-    public Animator animPerso;
-
-    public Vector2 direction = new Vector2(0,0);
-    private Rigidbody rbPlayer;
-    private GameObject camAchor;
+    public float maxSpeed = 30f;    
+    public float jumpForce = 10f;    
+    public float acceleration;
     public bool isGrounded;
 
-   
+    [Header("Rotation Parameters")]
+    public float rotationSpeed;
+    private Quaternion target;
+    public Animator animPerso;
+    private Vector2 direction = new Vector2(0,0);
+    private Rigidbody rbPlayer;
+
+    [Header("Jump Parameters")]    
+    public float delayToMove;
+    public AnimationCurve curve;
+    public bool jump;
+    public float currentTime;
+
+
+    [Header("Garvity Parameters")]
+    public float valGravity = 9.5f;
+    private float expVal = 1f;
+    public float minimum = 1.0F;
+    public float maximum = 1.5F;
+    static float t = 0.0f;
+    public float SmoothGravRota;
+
+
     void Awake()
     {
-        rbPlayer = GetComponent<Rigidbody>();
-        camAchor = transform.GetChild(2).gameObject;
+        rbPlayer = GetComponent<Rigidbody>();        
         animPerso = transform.GetChild(0).GetComponent<Animator>();
     }    
 
@@ -38,37 +50,57 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        ExpValue();
+        JumpLogic();
         animPerso.SetBool("isGrounded", isGrounded);
-    }
-
+    }   
 
     private void Move()
     {
         Vector3 vectMove = (transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x);
         vectMove = speed * vectMove;
-        rbPlayer.velocity  +=  vectMove * Time.deltaTime;
+        rbPlayer.velocity  =  vectMove;
+        
         rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
         animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
 
         if (direction != Vector2.zero)
+        {
             target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));
-
-
+        }
     }
     
     public void SetDir(InputAction.CallbackContext context)
     {        
         direction = context.ReadValue<Vector2>();     
     }
-
+    
     public void Jump(InputAction.CallbackContext context)
     {
         if (isGrounded)
         {
             animPerso.SetTrigger("Jump");
-            rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        }
+            //rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+            jump = true;
+        }        
+    }   
+
+    private void JumpLogic()
+    {        
+        if (isGrounded && currentTime >= delayToMove)
+        {                
+            currentTime = 0;
+            jump = false;
+        }        
+
+        if (jump)
+        {
+            currentTime += Time.fixedDeltaTime;
+            float percent = currentTime / delayToMove;
+            rbPlayer.AddForce(transform.up * jumpForce * curve.Evaluate(percent), ForceMode.Impulse);
             
+        }
+        
     }
 
     public void Echap(InputAction.CallbackContext context)
@@ -77,16 +109,36 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene("In_Game", LoadSceneMode.Additive);
     }
 
-    public float SmoothGravRota;
+    
+
+    private void ExpValue()
+    {       
+        if (!isGrounded)
+        {
+            expVal = Mathf.Lerp(minimum, maximum, t);
+            t += 0.5f * Time.deltaTime;
+        }
+            
+        
+        if (isGrounded)
+        {            
+            t = 0.0f;
+            expVal = 1f;
+        }
+    }
+
+    
+
     private void Gravity()
     {
-        rbPlayer.velocity -= transform.up * valGravity * rbPlayer.mass * Time.deltaTime;
+        rbPlayer.velocity -= transform.up * Mathf.Pow(valGravity, expVal) * rbPlayer.mass * Time.deltaTime;
+        
 
         RaycastHit hit;
         isGrounded = Physics.Raycast(transform.position, -transform.up, out hit, 0.3f);
         
 
-        if (isGrounded && hit.transform.CompareTag("Escaliers"))
+        if (isGrounded && !hit.transform.CompareTag("Escaliers"))
         {
             // Stick to surface
             transform.position = hit.point;            
@@ -100,7 +152,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             transform.GetChild(0).rotation = Quaternion.Slerp(transform.GetChild(0).rotation, target, Time.deltaTime * rotationSpeed);
-
         }
     }
 

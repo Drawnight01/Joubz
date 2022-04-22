@@ -9,10 +9,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Parameters")]
     public float speed = 10f;
-    public float maxSpeed = 30f;    
-    public float jumpForce = 10f;    
+    public float maxSpeed = 30f;
     public float acceleration;
     public bool isGrounded;
+    public Transform cam;
 
     [Header("Rotation Parameters")]
     public float rotationSpeed;
@@ -21,7 +21,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 direction = new Vector2(0,0);
     private Rigidbody rbPlayer;
 
-    [Header("Jump Parameters")]    
+    [Header("Jump Parameters")]
+    public float jumpForce = 10f;
+    public int comptSaut = 0;
     public float delayToMove;
     public AnimationCurve curve;
     public bool jump;
@@ -53,11 +55,15 @@ public class PlayerMovement : MonoBehaviour
         ExpValue();
         JumpLogic();
         animPerso.SetBool("isGrounded", isGrounded);
+
+        if (isGrounded && comptSaut != 0)
+            comptSaut = 0;
     }   
 
     private void Move()
     {
-        Vector3 vectMove = (transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x);
+        //Vector3 vectMove = (transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x);
+        Vector3 vectMove = (cam.forward.normalized * direction.y) + (cam.right.normalized * direction.x);
         vectMove = speed * vectMove;
         rbPlayer.velocity  =  vectMove;
         
@@ -66,41 +72,55 @@ public class PlayerMovement : MonoBehaviour
 
         if (direction != Vector2.zero)
         {
-            target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));
+            //target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));
+            target = Quaternion.LookRotation((cam.forward.normalized * direction.y) + (cam.right.normalized * direction.x), (cam.up));
         }
     }
     
     public void SetDir(InputAction.CallbackContext context)
-    {        
-        direction = context.ReadValue<Vector2>();     
+    {
+        direction = context.ReadValue<Vector2>();
+
+        if (context.canceled)
+            direction = Vector2.zero;
     }
+
     
     public void Jump(InputAction.CallbackContext context)
     {
-        if (isGrounded)
+        if (( isGrounded || comptSaut < 1) && context.performed)
         {
-            animPerso.SetTrigger("Jump");
-            //rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+            t = 0.0f;
+            expVal = 1f;
+            animPerso.SetTrigger("Jump"); 
             jump = true;
+            if(comptSaut < 1)
+            {
+                currentTime = 0;
+                comptSaut++;
+            }
+            else
+            {
+                comptSaut = 0;
+            }
         }        
     }   
 
     private void JumpLogic()
-    {        
-        if (isGrounded && currentTime >= delayToMove)
-        {                
-            currentTime = 0;
-            jump = false;
-        }        
-
-        if (jump)
+    {
+        if(jump)
         {
             currentTime += Time.fixedDeltaTime;
             float percent = currentTime / delayToMove;
-            rbPlayer.AddForce(transform.up * jumpForce * curve.Evaluate(percent), ForceMode.Impulse);
-            
+            rbPlayer.AddForce(transform.up * jumpForce * curve.Evaluate(percent), ForceMode.Impulse);                       
         }
-        
+
+        if(isGrounded && currentTime >= delayToMove)
+        {
+            currentTime = 0;
+            jump = false;
+        }
+
     }
 
     public void Echap(InputAction.CallbackContext context)

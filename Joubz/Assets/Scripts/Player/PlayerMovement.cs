@@ -10,24 +10,25 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Parameters")]
     public float speed = 10f;
     public float maxSpeed = 30f;
-    public float acceleration;
     public bool isGrounded;
-    public Transform cam;
+    private float speedMult;
+    [HideInInspector] public Vector3 vectMove;
+
 
     [Header("Rotation Parameters")]
     public float rotationSpeed;
     private Quaternion target;
-    public Animator animPerso;
+    [HideInInspector] public Animator animPerso;
     private Vector2 direction = new Vector2(0,0);
     private Rigidbody rbPlayer;
 
     [Header("Jump Parameters")]
-    public float jumpForce = 10f;
-    public int comptSaut = 0;
+    public float jumpForce = 10f;    
     public float delayToMove;
     public AnimationCurve curve;
-    public bool jump;
-    public float currentTime;
+    [HideInInspector] public bool jump;
+    private float currentTime;
+    private int comptSaut = 0;
 
 
     [Header("Garvity Parameters")]
@@ -52,28 +53,28 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        
         ExpValue();
         JumpLogic();
         animPerso.SetBool("isGrounded", isGrounded);
 
         if (isGrounded && comptSaut != 0)
             comptSaut = 0;
-    }   
-
+    }
+    
     private void Move()
     {
-        //Vector3 vectMove = (transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x);
-        Vector3 vectMove = (cam.forward.normalized * direction.y) + (cam.right.normalized * direction.x);
-        vectMove = speed * vectMove;
-        rbPlayer.velocity  =  vectMove;
+        
+        vectMove = (transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x);        
+        vectMove = speed * vectMove;        
+        rbPlayer.velocity  =  vectMove * speedMult;
         
         rbPlayer.velocity = Vector3.ClampMagnitude(rbPlayer.velocity, maxSpeed);
         animPerso.SetFloat("Blend", rbPlayer.velocity.magnitude);
 
         if (direction != Vector2.zero)
         {
-            //target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));
-            target = Quaternion.LookRotation((cam.forward.normalized * direction.y) + (cam.right.normalized * direction.x), (cam.up));
+            target = Quaternion.LookRotation((transform.GetChild(3).transform.forward.normalized * direction.y) + (transform.GetChild(3).transform.right.normalized * direction.x), (transform.GetChild(3).transform.up));            
         }
     }
     
@@ -96,11 +97,13 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             if(comptSaut < 1)
             {
+                GetComponent<FXSpawn>().SmokeLand();
                 currentTime = 0;
                 comptSaut++;
             }
             else
             {
+                
                 comptSaut = 0;
             }
         }        
@@ -115,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
             rbPlayer.AddForce(transform.up * jumpForce * curve.Evaluate(percent), ForceMode.Impulse);                       
         }
 
-        if(isGrounded && currentTime >= delayToMove)
+        if(currentTime >= delayToMove)
         {
             currentTime = 0;
             jump = false;
@@ -130,13 +133,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
     
-
+    
     private void ExpValue()
     {       
         if (!isGrounded)
         {
             expVal = Mathf.Lerp(minimum, maximum, t);
             t += 0.5f * Time.deltaTime;
+            speedMult = 0.7f;
         }
             
         
@@ -144,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
         {            
             t = 0.0f;
             expVal = 1f;
+            speedMult = 1f;
         }
     }
 
@@ -152,8 +157,6 @@ public class PlayerMovement : MonoBehaviour
     private void Gravity()
     {
         rbPlayer.velocity -= transform.up * Mathf.Pow(valGravity, expVal) * rbPlayer.mass * Time.deltaTime;
-        
-
         RaycastHit hit;
         isGrounded = Physics.Raycast(transform.position, -transform.up, out hit, 0.3f);
         

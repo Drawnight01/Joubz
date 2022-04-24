@@ -15,6 +15,7 @@ public class PortailTeleporter : MonoBehaviour
 
     void Update()
     {
+        
         if (playerIsOverlapping)
         {
             Vector3 portalToPlayer = player.position - transform.position;
@@ -38,6 +39,7 @@ public class PortailTeleporter : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            GameObject.Find("Camera").GetComponent<CamFollow>().posLerpSpeed = 10000;
             playerIsOverlapping = true;
         }
     }
@@ -46,6 +48,7 @@ public class PortailTeleporter : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            GameObject.Find("Camera").GetComponent<CamFollow>().posLerpSpeed = 6;
             playerIsOverlapping = false;
         }
     }

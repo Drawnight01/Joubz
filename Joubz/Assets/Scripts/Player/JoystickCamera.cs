@@ -20,6 +20,7 @@ public class JoystickCamera : MonoBehaviour
     public LayerMask maskCam;
     public float lerpTime = 5f;
     public AnimationCurve curve;
+    public AnimationCurve curveAuto;
     public Vector2 camDir;
 
     private void Start()
@@ -37,18 +38,19 @@ public class JoystickCamera : MonoBehaviour
     {        
         CameraColision();
         RotateCam();
-        //CamFollow();
+        AutoRotate();
     }
-
-    private void CamFollow()
+    public float autoLerp;
+    private void AutoRotate()
     {
-        transform.position = Vector3.Lerp(transform.position, player.position, curve.Evaluate(Time.deltaTime * lerpTime));
-        transform.rotation = Quaternion.Lerp(transform.rotation, player.rotation, curve.Evaluate(Time.deltaTime * lerpTime));
+        if(player.GetComponent<PlayerMovement>().vectMove != Vector3.zero)
+        {            
+            transform.rotation = Quaternion.Lerp(transform.rotation, GameObject.Find("Root").transform.rotation, curveAuto.Evaluate(Time.deltaTime * autoLerp));
+        }
     }
 
     private void RotateCam()
-    {
-        //transform.Rotate(transform.up, camDir.x * sensitivityX * Time.deltaTime, Space.Self);
+    {        
         xRotation += camDir.y;
         xRotation = Mathf.Clamp(xRotation, minXClamp, xClamp);
         Vector3 targetRotation = transform.localEulerAngles;

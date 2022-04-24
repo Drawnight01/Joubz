@@ -8,7 +8,7 @@ public class PortailCamera : MonoBehaviour
 
     void Start()
     {
-        playerCamera = GameObject.Find("Player").transform.GetChild(2).GetChild(0);
+        playerCamera = GameObject.Find("PlayerCam").transform;
     }
 
     void Update()
@@ -21,5 +21,6 @@ public class PortailCamera : MonoBehaviour
         Quaternion portalRotationDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
         Vector3 newCameraDirection = portalRotationDifference * playerCamera.forward;
         transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+        
     }
 }

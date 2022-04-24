@@ -19,7 +19,7 @@
                     "id": "c69e24fe-abac-447d-ad86-92e2ffd6429e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(pressPoint=1)"
                 },
                 {
                     "name": "Camera",

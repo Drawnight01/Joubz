@@ -11,6 +11,7 @@ public class JoystickCamera : MonoBehaviour
 
 
     [SerializeField] Transform playerCamera;
+    [SerializeField] Transform player;
     [SerializeField] float xClamp = 85f;
     [SerializeField] float minXClamp = 0f;
 
@@ -19,7 +20,14 @@ public class JoystickCamera : MonoBehaviour
     public LayerMask maskCam;
     public float lerpTime = 5f;
     public AnimationCurve curve;
+    public AnimationCurve curveAuto;
     public Vector2 camDir;
+
+    private void Start()
+    {
+        playerCamera = transform.GetChild(0);
+        player = GameObject.Find("Player").transform;
+    }
 
     private void Update()
     {
@@ -30,11 +38,19 @@ public class JoystickCamera : MonoBehaviour
     {        
         CameraColision();
         RotateCam();
+        AutoRotate();
     }
-    
-    private void RotateCam()
+    public float autoLerp;
+    private void AutoRotate()
     {
-        //transform.Rotate(transform.up, camDir.x * sensitivityX * Time.deltaTime, Space.Self);
+        if(player.GetComponent<PlayerMovement>().vectMove != Vector3.zero)
+        {            
+            transform.rotation = Quaternion.Lerp(transform.rotation, GameObject.Find("Root").transform.rotation, curveAuto.Evaluate(Time.deltaTime * autoLerp));
+        }
+    }
+
+    private void RotateCam()
+    {        
         xRotation += camDir.y;
         xRotation = Mathf.Clamp(xRotation, minXClamp, xClamp);
         Vector3 targetRotation = transform.localEulerAngles;

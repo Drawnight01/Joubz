@@ -8,7 +8,7 @@ public class PortailCamera : MonoBehaviour
 
     void Start()
     {
-        playerCamera = GameObject.Find("PlayerCam").transform;
+        //playerCamera = GameObject.Find("Camera").transform;
     }
 
     void Update()

@@ -187,13 +187,16 @@ public class Portal : MonoBehaviour
 
         if(intersections.Length > 1)
         {
+            Debug.Log(">1");
             return false;
         }
         else if(intersections.Length == 1) 
         {
+            Debug.Log("==1");
             // We are allowed to intersect the old portal position.
             if (intersections[0] != collider)
             {
+                Debug.Log(intersections[0]);
                 return false;
             }
         }

@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 235960930}
   - component: {fileID: 235960929}
   - component: {fileID: 235960928}
+  - component: {fileID: 235960932}
   m_Layer: 8
   m_Name: Portal 2
   m_TagString: Portal
@@ -420,6 +421,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235960926}
   m_Mesh: {fileID: 4300006, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+--- !u!114 &235960932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235960926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bae5e97e418d2c438c973956f71cf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  reciever: {fileID: 7518823327383661502}
 --- !u!1 &270270205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,7 +2648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006651695}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: -49.9, y: 25, z: -47.3}
+  m_LocalPosition: {x: -49.9, y: 25, z: -49.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 235960927}
@@ -8206,9 +8221,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7919181505523073993, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7919181506801207862, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
       propertyPath: m_Name
       value: --Player--
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919181506801207862, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7919181506801207863, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
       propertyPath: m_RootOrder
@@ -8256,7 +8279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919181506918744444, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
       propertyPath: jumpForce
-      value: 50
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189155232086064953, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
@@ -8398,6 +8425,7 @@ GameObject:
   - component: {fileID: 7518823327383661496}
   - component: {fileID: 8021243962792435227}
   - component: {fileID: 3499967759569246534}
+  - component: {fileID: 7518823327383661499}
   m_Layer: 8
   m_Name: Portal 1
   m_TagString: Portal
@@ -8405,6 +8433,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7518823327383661499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518823327383661498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bae5e97e418d2c438c973956f71cf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  reciever: {fileID: 235960927}
 --- !u!4 &7518823327383661502
 Transform:
   m_ObjectHideFlags: 0

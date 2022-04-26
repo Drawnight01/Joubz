@@ -28,7 +28,7 @@ public class PortailTeleporter : MonoBehaviour
                 player.Rotate(Vector3.up, rotationDiff);
 
                 Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
-                player.position = reciever.position + positionOffset + new Vector3(0,1,0);
+                player.position = reciever.position + positionOffset + transform.up;
 
                 playerIsOverlapping = false;
             }

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshFilter))]
-[RequireComponent(typeof(MeshRenderer))]
+//[RequireComponent(typeof(MeshFilter))]
+//[RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
 public class PortalableObject : MonoBehaviour
@@ -27,8 +27,8 @@ public class PortalableObject : MonoBehaviour
         var meshFilter = cloneObject.AddComponent<MeshFilter>();
         var meshRenderer = cloneObject.AddComponent<MeshRenderer>();
 
-        meshFilter.mesh = GetComponent<MeshFilter>().mesh;
-        meshRenderer.materials = GetComponent<MeshRenderer>().materials;
+        meshFilter.mesh = transform.GetChild(0).GetComponent<MeshFilter>().mesh;
+        meshRenderer.materials = transform.GetChild(0).GetComponent<MeshRenderer>().materials;
         cloneObject.transform.localScale = transform.localScale;
 
         rigidbody = GetComponent<Rigidbody>();

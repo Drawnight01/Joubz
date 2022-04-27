@@ -38,8 +38,9 @@ Material:
     m_Ints: []
     m_Floats:
     - LerpValue: 0.01
-    - PowerStep: 1
-    - paralaxOffset: -0.02
+    - PowerStep: 1.26
+    - StartVal: 0.51
+    - paralaxOffset: -0.01
     m_Colors:
     - BaseColor: {r: 0.9716981, g: 0, b: 0, a: 1}
     - InnerColor: {r: 0, g: 0.23754954, b: 1, a: 1}

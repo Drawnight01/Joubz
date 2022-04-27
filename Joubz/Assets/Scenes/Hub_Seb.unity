@@ -8221,17 +8221,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7919181505523073993, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
+    - target: {fileID: 6437119639235429529, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
+      propertyPath: portalCamera
+      value: 
+      objectReference: {fileID: 2037684441892272790}
+    - target: {fileID: 6437119639235429529, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
+      propertyPath: portals.Array.data[0]
+      value: 
+      objectReference: {fileID: 8021243962792435227}
+    - target: {fileID: 6437119639235429529, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
+      propertyPath: portals.Array.data[1]
+      value: 
+      objectReference: {fileID: 235960929}
     - target: {fileID: 7919181506801207862, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
       propertyPath: m_Name
       value: --Player--
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919181506801207862, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7919181506801207863, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
       propertyPath: m_RootOrder
@@ -8276,14 +8280,6 @@ PrefabInstance:
     - target: {fileID: 7919181506801207863, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919181506918744444, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
-      propertyPath: jumpForce
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 9189155232086064953, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
@@ -8334,28 +8330,6 @@ Transform:
   m_Father: {fileID: 1485948485}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6437119639235429528 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7919181505659370049, guid: 80f608ee2db7c7244a5aa165e85f1086, type: 3}
-  m_PrefabInstance: {fileID: 3797567665186995929}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6437119639235429529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6437119639235429528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca70876a90a47d46bc6e8fa42abc499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portals:
-  - {fileID: 8021243962792435227}
-  - {fileID: 235960929}
-  portalCamera: {fileID: 2037684441892272790}
-  iterations: 1
 --- !u!4 &7008938165659430624
 Transform:
   m_ObjectHideFlags: 0

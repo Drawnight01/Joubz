@@ -38,10 +38,11 @@ Material:
     m_Ints: []
     m_Floats:
     - LerpValue: 0.01
-    - PowerStep: 1
-    - paralaxOffset: -0.01
+    - PowerStep: 1.43
+    - StartVal: 2
+    - paralaxOffset: -0.02
     m_Colors:
     - BaseColor: {r: 0.9716981, g: 0, b: 0, a: 1}
     - InnerColor: {r: 1, g: 1, b: 1, a: 1}
-    - Tiling: {r: 2, g: 2, b: 2, a: 2}
+    - Tiling: {r: 50, g: 50, b: 50, a: 2}
   m_BuildTextureStacks: []
